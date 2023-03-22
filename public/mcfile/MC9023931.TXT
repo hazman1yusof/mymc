@@ -1,0 +1,14 @@
+[DATA1]
+compcode = 9A
+datefrom = 12/2/2023
+dateto = 18/2/2023
+mrn = 000003
+episno = 12
+newic = 930112345017
+patfrom = TAJUL ARIFFIN MAHADI
+mccnt = 3
+adduser = FARID
+adddate = 12/2/2023
+serialno = 9023931
+printeddate = 12/2/2023
+printedby = tajul

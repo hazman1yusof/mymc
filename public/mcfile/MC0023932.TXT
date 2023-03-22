@@ -1,0 +1,14 @@
+[DATA1]
+compcode = 9A
+datefrom = 12/2/2023
+dateto = 18/2/2023
+mrn = 000003
+episno = 12
+newic = 870112435017
+patfrom = HAZMAN
+mccnt = 3
+adduser = FARID
+adddate = 12/2/2023
+serialno = 0023932
+printeddate = 12/2/2023
+printedby = YATI
