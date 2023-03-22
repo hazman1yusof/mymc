@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/test','mcController@test');
-Route::get('/','mcController@show');
-Route::get('/save','mcController@save');
-Route::get('/mykad','MycardController@show');
-Route::get('/read_mykad','MycardController@read_mykad');
-Route::get('/read_mykid','MycardController@read_mykid');
+// Route::get('/test','mcController@test');
+Route::get('/','mcController@show2');
+// Route::get('/save','mcController@save');
+// Route::get('/mykad','MycardController@show');
+// Route::get('/read_mykad','MycardController@read_mykad');
+// Route::get('/read_mykid','MycardController@read_mykid');
 
 

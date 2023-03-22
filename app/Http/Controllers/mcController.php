@@ -34,6 +34,36 @@ class mcController extends Controller
 
     }
 
+    public function show2(Request $request)
+    {   
+        // http://mymc.test:8080/?compcode=9A&datefrom=12/2/2023&dateto=18/2/2023&mrn=000003&episno=12&newic=930112345017&patfrom=AMIRAH ROSLI&mccnt=3&adduser=FARID&adddate=12/2/2023&serialno=0023931&printeddate=12/2/2023&printedby=YATI
+
+        $serialno = $request->serialno;
+
+        $ini_array = [
+            'compcode' => $request->compcode,
+            'datefrom' => $request->datefrom,
+            'dateto' => $request->dateto,
+            'mrn' => $request->mrn,
+            'episno' => $request->episno,
+            'newic' => $request->newic,
+            'patfrom' => $request->patfrom,
+            'mccnt' => $request->mccnt,
+            'adduser' => $request->adduser,
+            'adddate' => $request->adddate,
+            'serialno' => $request->serialno,
+            'printeddate' => $request->printeddate,
+            'printedby' => $request->printedby
+        ];
+
+        if(true){
+            return view('mymc',compact('ini_array'));
+        }else{
+            abort(403, 'MC not found');
+        }
+
+    }
+
     public function test(Request $request)
     {   
         $serialno = '0023931';
