@@ -48,7 +48,7 @@ class mcController extends Controller
             'episno' => $request->episno,
             'newic' => $request->newic,
             'patfrom' => $request->patfrom,
-            'mccnt' => $request->mccnt,
+            'mccnt' => ltrim($request->mccnt, '0'),
             'adduser' => $request->adduser,
             'adddate' => $request->adddate,
             'serialno' => $request->serialno,
