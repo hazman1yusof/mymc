@@ -66,7 +66,7 @@
 			  text: ['I hereby certify that I have examined the name listed above']
 		    },{
 		      style:'colmargin2',
-			  text: ['dan mendapati beliau tidak sihat / tidak fit untuk menjalankan tugas selama 3 hari']
+			  text: ['dan mendapati beliau tidak sihat / tidak fit untuk menjalankan tugas selama '+mydata.mc_days+' hari']
 		    },{
 		      style:'colmargin',
 			  text: ['and find that '+mydata.sex+' is unfit for duty for '+mydata.mc_days+' days']
@@ -74,13 +74,19 @@
 		      style:'colmargin2',
 		      columns: [
 					{ width: '70%', text: 'daripada '+mydata.mc_from+' sehingga '+mydata.mc_to},
-					{ width: '30%', text: 'Tandatangan Doktor' }
+					{ width: '30%', text: '________________________' }
 				]
 		    },{
 		      style:'colmargin',
 		      columns: [
 					{ width: '70%', text: 'from '+mydata.mc_from+' to '+mydata.mc_to},
-					{ width: '30%', text: "Tandatangan Doktor\nDoctor's Signature" }
+					{ width: '30%', text: 'Tandatangan Doktor' }
+				]
+		    },{
+		      style:'colmargin',
+		      columns: [
+					{ width: '70%', text: ''},
+					{ width: '30%', text: 'Doctor Signature' }
 				]
 		    },{
 		      style:'colmargin3',
@@ -93,7 +99,7 @@
 				header1: {
 					bold: true,
 					alignment: 'center',
-					margin: [0,150,0,5]		
+					margin: [0,130,0,5]		
 				},header2: {
 					bold: true,
 					italics: true,

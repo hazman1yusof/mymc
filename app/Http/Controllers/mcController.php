@@ -36,7 +36,7 @@ class mcController extends Controller
 
     public function show2(Request $request)
     {   
-        // http://mymc.test:8080/?compcode=9A&datefrom=12/2/2023&dateto=18/2/2023&mrn=000003&episno=12&newic=930112345017&patfrom=AMIRAH ROSLI&mccnt=3&adduser=FARID&adddate=12/2/2023&serialno=0023931&printeddate=12/2/2023&printedby=YATI
+        // http://mymc.test:8443/?compcode=9A&datefrom=12/2/2023&dateto=18/2/2023&mrn=000003&episno=12&newic=930112345017&patfrom=AMIRAH ROSLI&mccnt=3&adduser=FARID&adddate=12/2/2023&serialno=0023931&printeddate=12/2/2023&printedby=YATI&sex=she
 
         $serialno = $request->serialno;
 
@@ -47,8 +47,8 @@ class mcController extends Controller
             'mrn' => $request->mrn,
             'episno' => $request->episno,
             'newic' => $request->newic,
-            'patfrom' => html_entity_decode($request->patfrom, ENT_QUOTES),
-            'mccnt' => $request->mccnt,
+            'patfrom' => $request->patfrom,
+            'mccnt' => ltrim($request->mccnt, '0'),
             'adduser' => $request->adduser,
             'adddate' => $request->adddate,
             'serialno' => $request->serialno,
