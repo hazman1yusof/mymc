@@ -17,7 +17,7 @@
 <script>
 	
 	var mydata = {
-	    "name":"{{$ini_array['patfrom']}}",
+	    "name":"{!!$ini_array['patfrom']!!}",
 	    "date_visit":"{{$ini_array['datefrom']}}",
 	    "date_created":"{{$ini_array['adddate']}}",
 	    "newic":"{{$ini_array['newic']}}",
@@ -26,11 +26,11 @@
 	    "mc_from":"{{$ini_array['datefrom']}}",
 	    "mc_to":"{{$ini_array['dateto']}}",
 	    "print_date":"{{$ini_array['printeddate']}}",
-	    "print_by":"{{$ini_array['printedby']}}"
+	    "print_by":"{!!$ini_array['printedby']!!}",
+	    "sex":"{{$ini_array['sex']}}"
 	};
 
 	$(document).ready(function () {
-		console.log(mydata);
 		var docDefinition = {
 			pageSize: 'A4',
 		  	content: [
@@ -69,13 +69,19 @@
 			  text: ['dan mendapati beliau tidak sihat / tidak fit untuk menjalankan tugas selama 3 hari']
 		    },{
 		      style:'colmargin',
-			  text: ['and find that she is unfit for duty for '+mydata.mc_days+' days']
+			  text: ['and find that '+mydata.sex+' is unfit for duty for '+mydata.mc_days+' days']
 		    },{
 		      style:'colmargin2',
-			  text: ['daripada '+mydata.mc_from+' sehingga '+mydata.mc_to]
+		      columns: [
+					{ width: '70%', text: 'daripada '+mydata.mc_from+' sehingga '+mydata.mc_to},
+					{ width: '30%', text: 'Tandatangan Doktor' }
+				]
 		    },{
 		      style:'colmargin',
-			  text: ['from '+mydata.mc_from+' to '+mydata.mc_to]
+		      columns: [
+					{ width: '70%', text: 'from '+mydata.mc_from+' to '+mydata.mc_to},
+					{ width: '30%', text: "Tandatangan Doktor\nDoctor's Signature" }
+				]
 		    },{
 		      style:'colmargin3',
 			  text: ['Note: This medical certificate is not valid for absence from court']
@@ -87,7 +93,7 @@
 				header1: {
 					bold: true,
 					alignment: 'center',
-					margin: [0,50,0,5]		
+					margin: [0,150,0,5]		
 				},header2: {
 					bold: true,
 					italics: true,

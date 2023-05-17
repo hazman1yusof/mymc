@@ -47,13 +47,14 @@ class mcController extends Controller
             'mrn' => $request->mrn,
             'episno' => $request->episno,
             'newic' => $request->newic,
-            'patfrom' => $request->patfrom,
+            'patfrom' => html_entity_decode($request->patfrom, ENT_QUOTES),
             'mccnt' => $request->mccnt,
             'adduser' => $request->adduser,
             'adddate' => $request->adddate,
             'serialno' => $request->serialno,
             'printeddate' => $request->printeddate,
-            'printedby' => $request->printedby
+            'printedby' => $request->printedby,
+            'sex' => $request->sex
         ];
 
         if(true){

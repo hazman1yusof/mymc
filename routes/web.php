@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/test','mcController@test');
 Route::get('/','mcController@show2');
+// Route::get('/pat_mast','dumpController@pat_mast');
 // Route::get('/save','mcController@save');
 // Route::get('/mykad','MycardController@show');
 // Route::get('/read_mykad','MycardController@read_mykad');
