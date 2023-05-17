@@ -30,7 +30,6 @@
 	};
 
 	$(document).ready(function () {
-		console.log(mydata);
 		var docDefinition = {
 			pageSize: 'A4',
 		  	content: [
