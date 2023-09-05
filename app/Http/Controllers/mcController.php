@@ -67,7 +67,7 @@ class mcController extends Controller
 
     public function showrf(Request $request)
     {   
-        // http://mymc.test:8443/rf?docname=1&name=1&newic=1&reffor=1&exam=1&invest=1
+        // http://mymc.test:8443/rf?date=1&docname=1&name=1&newic=1&reffor=1&exam=1&invest=1
 
         $serialno = $request->serialno;
 
@@ -78,7 +78,7 @@ class mcController extends Controller
             'reffor' => $request->reffor,
             'exam' => $request->exam,
             'invest' => $request->invest,
-            'refdate' => Carbon::now("Asia/Kuala_Lumpur")->format('d/m/Y')
+            'refdate' => $request->date
         ];
 
         if(true){

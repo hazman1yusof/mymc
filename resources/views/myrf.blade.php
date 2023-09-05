@@ -31,33 +31,44 @@
                 pageSize: 'A4',
                 content: [
                     {
-                        text: 'Hospital Islam Az-Zahrah\n\n',
+                        text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
                         style: 'hospname'
                     },
                     {
-                        text: mydata.refdate+'\n\n',
-                        style: 'refdate'
+                        text: ['To : ',{text: 'Dr. '+mydata.docname+'\n\n', style: 'nobold'}],
+                        style: 'totalbold'
                     },
-                    'To : Dr. '+mydata.docname+'\n\n',
                     'Dear Dr.\n\n',
-                    'Re : Name : '+mydata.name+'\n',
                     {
-                        text: ['I/C No : '+mydata.newic+'\n\n'],
+                        text: ['Re : Name : ',{text: mydata.name+'\n', style: 'nobold'}],
+                        style: 'totalbold'
+                    },
+                    {
+                        text: ['I/C No : ',{text: mydata.newic+'\n\n', style: 'nobold'}],
                         style: 'newic'
                     },
-                    'The Above is referred for\n',
                     {
-                        text: [ mydata.reffor+'\n\n' ],
+                        text: [ 'The Above is referred for' ],
+                        style: 'totalbold'
+                    },
+                    {
+                        text: [ mydata.reffor ],
                         style: 'text'
                     },
-                    'Physical examination',
                     {
-                        text: [ mydata.exam+'\n\n' ],
+                        text: [ 'Physical examination' ],
+                        style: 'totalbold'
+                    },
+                    {
+                        text: [ mydata.exam ],
                         style: 'text'
                     },
-                    'Investigation',
                     {
-                        text: [ mydata.invest+'\n\n' ],
+                        text: [ 'Investigation' ],
+                        style: 'totalbold'
+                    },
+                    {
+                        text: [ mydata.invest ],
                         style: 'text'
                     },
                     'Thank you,\n\n',
@@ -67,19 +78,18 @@
                 ],
                 styles: {
                     hospname: {
-                        fontSize: 16,
-                        bold: true,
                         margin: [0, 40, 0, 0],
-                        alignment: 'center'
+                        bold: true
                     },
                     refdate: {
                         alignment: 'center'
                     },
                     text: {
-                        margin: [5, 5, 5, 5],
+                        margin: [0, 2, 0, 15],
                     },
                     newic: {
                         margin: [20, 0, 0, 0],
+                        bold: true
                     },
                     header: {
                         fontSize: 18,
@@ -101,8 +111,10 @@
                         color: 'black'
                     },
                     totalbold: {
-                        bold: true,
-                        fontSize: 10,
+                        bold: true
+                    },
+                    nobold:{
+                        bold: false
                     }
                 },
             };
