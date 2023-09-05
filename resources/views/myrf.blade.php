@@ -78,7 +78,7 @@
                 ],
                 styles: {
                     hospname: {
-                        margin: [0, 40, 0, 0],
+                        margin: [0, 60, 0, 0],
                         bold: true
                     },
                     refdate: {
