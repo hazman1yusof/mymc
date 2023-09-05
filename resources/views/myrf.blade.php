@@ -30,23 +30,48 @@
                 },
                 pageSize: 'A4',
                 content: [
+                    // {
+                    //     text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
+                    //     style: 'date'
+                    // },
+                    // {
+                    //     text: ['To : ',{text: 'Dr. '+mydata.docname+'\n\n', style: 'to'}],
+                    //     style: 'totalbold'
+                    // },
                     {
-                        text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
-                        style: 'hospname'
+                      style:'date',
+                      columns: [
+                            { width: '15%', text: 'Date', bold: true },
+                            { width: '85%', text: ': '+mydata.refdate, bold: false }
+                        ],
                     },
                     {
-                        text: ['To : ',{text: 'Dr. '+mydata.docname+'\n\n', style: 'nobold'}],
-                        style: 'totalbold'
-                    },
-                    'Dear Dr.\n\n',
-                    {
-                        text: ['Re : Name : ',{text: mydata.name+'\n', style: 'nobold'}],
-                        style: 'totalbold'
+                      columns: [
+                            { width: '15%', text: 'To', bold: true },
+                            { width: '85%', text: ': Dr. '+mydata.refdate, bold: false }
+                        ],
                     },
                     {
-                        text: ['I/C No : ',{text: mydata.newic+'\n\n', style: 'nobold'}],
-                        style: 'newic'
+                      columns: [
+                            { width: '15%', text: 'Patient Name', bold: true },
+                            { width: '85%', text: ': '+mydata.name+'\n', bold: false }
+                        ],
                     },
+                    {
+                      columns: [
+                            { width: '15%', text: 'I/C No.', bold: true },
+                            { width: '85%', text: ': '+mydata.newic+'\n\n', bold: false }
+                        ],
+                    },
+                    'Dear Dr,\n\n',
+                    // {
+                    //     text: ['Patient Name : ',{text: mydata.name+'\n', style: 'patname'}],
+                    //     style: 'totalbold'
+                    // },
+                    // {
+                    //     text: ['I/C No : ',{text: mydata.newic+'\n\n', style: 'newic'}],
+                    //     style: 'totalbold'
+                    // },
                     {
                         text: [ 'The Above is referred for' ],
                         style: 'totalbold'
@@ -77,19 +102,23 @@
                     'Dr',
                 ],
                 styles: {
-                    hospname: {
+                    date: {
                         margin: [0, 80, 0, 0],
-                        bold: true
                     },
-                    refdate: {
-                        alignment: 'center'
+                    to: {
+                        margin: [0, 0, 0, 0],
+                        bold: false
+                    },
+                    patname: {
+                        margin: [0, 0, 0, 0],
+                        bold: false
+                    },
+                    newic: {
+                        margin: [0, 0, 0, 0],
+                        bold: false
                     },
                     text: {
                         margin: [0, 2, 0, 15],
-                    },
-                    newic: {
-                        margin: [20, 0, 0, 0],
-                        bold: true
                     },
                     header: {
                         fontSize: 18,
