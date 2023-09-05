@@ -65,6 +65,30 @@ class mcController extends Controller
 
     }
 
+    public function showrf(Request $request)
+    {   
+        // http://mymc.test:8443/rf?docname=1&name=1&newic=1&reffor=1&exam=1&invest=1
+
+        $serialno = $request->serialno;
+
+        $ini_array = [
+            'docname' => $request->docname,
+            'name' => $request->name,
+            'newic' => $request->newic,
+            'reffor' => $request->reffor,
+            'exam' => $request->exam,
+            'invest' => $request->invest,
+            'refdate' => Carbon::now("Asia/Kuala_Lumpur")->format('d/m/Y')
+        ];
+
+        if(true){
+            return view('myrf',compact('ini_array'));
+        }else{
+            abort(403, 'MC not found');
+        }
+
+    }
+
     public function test(Request $request)
     {   
         $serialno = '0023931';
