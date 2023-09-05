@@ -48,7 +48,7 @@
                     {
                       columns: [
                             { width: '15%', text: 'To', bold: true },
-                            { width: '85%', text: ': Dr. '+mydata.refdate, bold: false }
+                            { width: '85%', text: ': Dr. '+mydata.docname, bold: false }
                         ],
                     },
                     {
