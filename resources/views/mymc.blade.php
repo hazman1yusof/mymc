@@ -27,6 +27,7 @@
 	    "mc_to":"{{$ini_array['dateto']}}",
 	    "print_date":"{{$ini_array['printeddate']}}",
 	    "print_by":"{!!$ini_array['printedby']!!}",
+	    "visit_date":"{!!$ini_array['visitdate']!!}",
 	    "sex":"{{$ini_array['sex']}}"
 	};
 
@@ -50,7 +51,7 @@
 		      style:'colmargin',
 		      columns: [
 					{ width: '70%', text: 'Patient Name: '+mydata.name, bold: true },
-					{ width: '30%', text: 'Date of Visit: '+mydata.date_visit, bold: false }
+					{ width: '30%', text: 'Date of Visit: '+mydata.visit_date, bold: false }
 				],
 		    },{
 		      style:'colmargin',
