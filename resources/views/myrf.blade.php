@@ -29,16 +29,15 @@
                     ]
                 },
                 pageSize: 'A4',
-                pageMargins: [40, 130, 40, 40],
+                pageMargins: [40, 30, 40, 40],
                 content: [
                     // {
                     //     text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
                     //     style: 'date'
                     // },
-                    // {
-                    //     text: ['To : ',{text: 'Dr. '+mydata.docname+'\n\n', style: 'to'}],
-                    //     style: 'totalbold'
-                    // },
+                    {
+                        text: 'REFERRAL',bold:true,alignment:'center',fontSize:21,margin: [0, 0, 0, 30]
+                    },
                     {
                       style:'date',
                       columns: [
