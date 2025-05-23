@@ -29,7 +29,7 @@
                     ]
                 },
                 pageSize: 'A4',
-                pageMargins: [40, 30, 40, 40],
+                pageMargins: [66, 30, 40, 40],
                 content: [
                     // {
                     //     text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
