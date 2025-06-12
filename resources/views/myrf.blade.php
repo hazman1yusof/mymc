@@ -29,14 +29,14 @@
                     ]
                 },
                 pageSize: 'A4',
-                pageMargins: [66, 30, 40, 40],
+                pageMargins: [80, 30, 40, 60],
                 content: [
                     // {
                     //     text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
                     //     style: 'date'
                     // },
                     {
-                        text: 'REFERRAL',bold:true,alignment:'center',fontSize:21,margin: [0, 0, 0, 30]
+                        text: 'REFERRAL LETTER',bold:true,alignment:'center',fontSize:18,margin: [0, 0, 0, 30]
                     },
                     {
                       style:'date',
