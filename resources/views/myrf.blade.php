@@ -12,32 +12,40 @@
     
     <script>
         var mydata = {
-            "docname":"{!!$ini_array['docname']!!}",
-            "name":"{!!$ini_array['name']!!}",
+            "docname":`{!!str_replace('`', '', $ini_array['docname'])!!}`,
+            "name":`{!!str_replace('`', '', $ini_array['name'])!!}`,
             "newic":"{!!$ini_array['newic']!!}",
             "reffor":"{!!$ini_array['reffor']!!}",
-            "exam":"{!!$ini_array['exam']!!}",
-            "invest":"{!!$ini_array['invest']!!}",
+            "exam":`{!!str_replace('`', '', $ini_array['exam'])!!}`,
+            "invest":`{!!str_replace('`', '', $ini_array['invest'])!!}`,
             "refdate":"{!!$ini_array['refdate']!!}"
         };
 
         $(document).ready(function () {
             var docDefinition = {
+                header: function(currentPage, pageCount, pageSize) {
+                    if(currentPage == 1){
+                        return {
+                            text: 'REFERRAL LETTER',bold:true,alignment:'center',fontSize:18,margin: [0, 30, 0, 30]
+                        };
+                    }
+
+                },
                 footer: function(currentPage, pageCount) {
                     return [
                         { text: currentPage.toString() + ' of ' + pageCount, alignment: 'center' }
                     ]
                 },
                 pageSize: 'A4',
-                pageMargins: [80, 30, 40, 60],
+                pageMargins: [80, 90, 40, 60],
                 content: [
                     // {
                     //     text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
                     //     style: 'date'
                     // },
-                    {
-                        text: 'REFERRAL LETTER',bold:true,alignment:'center',fontSize:18,margin: [0, 0, 0, 30]
-                    },
+                    // {
+                    //     text: 'REFERRAL LETTER',bold:true,alignment:'center',fontSize:18,margin: [0, 0, 0, 30]
+                    // },
                     {
                       style:'date',
                       columns: [
