@@ -26,7 +26,7 @@
                 header: function(currentPage, pageCount, pageSize) {
                     if(currentPage == 1){
                         return {
-                            text: 'REFERRAL LETTER',bold:true,alignment:'center',fontSize:18,margin: [0, 30, 0, 30]
+                            text: 'REFERRAL LETTER',bold:true,alignment:'center',fontSize:18,margin: [0, 80, 0, 0]
                         };
                     }
 
@@ -37,7 +37,7 @@
                     ]
                 },
                 pageSize: 'A4',
-                pageMargins: [80, 90, 40, 60],
+                pageMargins: [60, 120, 40, 100],
                 content: [
                     // {
                     //     text: ['Date : ',{text: mydata.refdate+'\n', style: 'nobold'}],
@@ -68,7 +68,7 @@
                     {
                       columns: [
                             { width: '15%', text: 'I/C No.', bold: true },
-                            { width: '85%', text: ': '+mydata.newic+'\n\n', bold: false }
+                            { width: '85%', text: ': '+mydata.newic+'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n', bold: false }
                         ],
                     },
                     'Dear Dr,\n\n',
